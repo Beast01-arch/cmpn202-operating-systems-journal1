@@ -9,5 +9,6 @@
 - [Week 5 – Advanced Security & Monitoring](Week5.md)
 - [Week 6 – Performance Evaluation](Week6.md)
 - [Week 7 – Security Audit & Evaluation](Week7.md)
+- [Click here to watch the full explanation video](video/d.mp4)
 
 
