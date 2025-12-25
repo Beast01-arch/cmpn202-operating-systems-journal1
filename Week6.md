@@ -26,38 +26,39 @@ df -h
 top
 Explanation:
 These commands provide baseline CPU load, memory usage, disk availability, and process activity prior to workload execution.
-![Baseline system performance metrics (idle state)](img/week6/baseline-uptime-free-df-top.PNG)
+![Week 6 – Baseline system performance metrics (uptime, memory, disk usage)](img/week6/uptime&free&df-h.PNG)
+
 ___________________________________________________________________________
 # 4.	CPU and Memory Load Testing
 ## 4.1 CPU Stress Test
 stress-ng --cpu 4 --timeout 60s
 Explanation:
 Generates sustained CPU load to evaluate scheduling behaviour, CPU saturation, and system responsiveness.
-![CPU stress testing using stress-ng](img/week6/stress-ng-cpu.PNG)
+![Week 6 – CPU stress testing using stress-ng](img/week6/stress.PNG)
 ___________________________________________________________________________
 ## 4.2 Memory Stress Test
 stress-ng --vm 2 --vm-bytes 80% --timeout 60s
 Explanation:
 Allocates a significant portion of system memory to observe memory pressure handling and potential swapping behaviour.
-![Memory stress testing using stress-ng](img/week6/stress-ng-memory.PNG)
+!![Week 6 – Memory stress testing using stress-ng](img/week6/stress.PNG)
 ___________________________________________________________________________
 # 5.	Disk I/O Performance Testing
 fio --name=io_test --rw=readwrite --bs=4k --size=1G --numjobs=1 --time_based --runtime=60
 Explanation:
 Simulates real-world disk read/write workloads to assess I/O throughput and latency.
-![Disk I/O performance testing using fio](img/week6/fio-disk-test.PNG)
+![Week 6 – Disk I/O performance testing using fio](img/week6/fio.PNG)
 ___________________________________________________________________________
 # 6.	Network Performance Testing
 Testing network performance between a server and workstation involves measuring key metrics such as throughput, latency, jitter, packet loss, and reliability to ensure optimal data transfer efficiency.
 ## 6.1 Starting iperf Server (Ubuntu Server)
 iperf3 -s
-![iperf3 server running on Ubuntu Server](img/week6/iperf3-server.PNG)
+![Week 6 – iperf3 server running on Ubuntu Server](img/week6/ipef3_s.PNG)
 ___________________________________________________________________________
 ## 6.2 Running iperf Client (Fedora Workstation)
 iperf3 -c 192.168.56.101
 Explanation:
 Measures network throughput and latency between the workstation and the server.
-![Network throughput testing using iperf3 client](img/week6/iperf3-client-results.PNG)
+![Week 6 – Network throughput testing using iperf3](img/week6/ipef3_s.PNG)
 ___________________________________________________________________________
 # 7.	Bottleneck Identification
 Performance analysis revealed the following bottlenecks:
@@ -72,11 +73,11 @@ systemctl list-unit-files --type=service
 sudo systemctl disable apache2
 Explanation:
 Disabling unused services reduces background resource consumption and improves system efficiency.
-![Service review and optimisation using systemctl](img/week6/systemctl-services.PNG)
+![Week 6 – Process and service analysis during optimisation](img/week6/top.PNG)
 _________________________________________________________________________________
 ## 8.2 Post-Optimisation Performance Re-Test
 Baseline and load tests were repeated after optimisation to quantify improvements.
-![Post-optimisation performance metrics](img/week6/post-optimisation-metrics.PNG)
+![Week 6 – Post-optimisation system performance metrics](img/week6/uptime&free&df-h.PNG)
 ___________________________________________________________________________
 # 9.	Performance Analysis Summary
 Post-optimisation results demonstrated:
