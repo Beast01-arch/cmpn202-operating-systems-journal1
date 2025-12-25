@@ -1,9 +1,9 @@
 
-# Overview
+# 1.Introduction
 
 The following commands were executed on the Ubuntu Server system to install and verify applications selected for performance testing. Each application represents a different workload type, enabling structured analysis of operating system behaviour in later phases.
 _________________________________________________________________________________
-# 1. Package Index Update
+# 2. Package Index Update
 sudo apt update
 
 
@@ -12,7 +12,7 @@ This command updates the local APT package index, ensuring that the latest packa
 ![Week 3 – APT package index update](img/week3/update.PNG)
 _________________________________________________________________________________
 
-# 2. CPU and Memory Stress Tool Installation
+# 3. CPU and Memory Stress Tool Installation
 sudo apt install stress-ng -y
 
 
@@ -21,7 +21,7 @@ Installs stress-ng, a comprehensive workload generator used to create controlled
 ![Week 3 – stress-ng installation](img/week3/stress.PNG)
 
 _________________________________________________________________________________
-# 3. Disk I/O Performance Tool Installation
+# 4. Disk I/O Performance Tool Installation
 sudo apt install fio -y
 
 
@@ -30,7 +30,7 @@ Installs fio, a flexible and widely adopted disk benchmarking tool used to simul
 ![Week 3 – fio disk benchmarking tool installation](img/week3/fio.PNG)
 
 _________________________________________________________________________________
-# 4. Network Performance Testing Tool Installation
+# 5. Network Performance Testing Tool Installation
 sudo apt install iperf3 -y
 
 
@@ -40,7 +40,7 @@ Installs iperf3, a network performance measurement tool used to evaluate through
 
 
 _________________________________________________________________________________
-# 5. Server Application Installation (Web Server)
+# 6. Server Application Installation (Web Server)
 sudo apt install apache2 -y
 
 
@@ -50,7 +50,7 @@ Installs the Apache HTTP Server, representing a persistent server workload that 
 
 
 _________________________________________________________________________________
-# 6. Verification of Installed Applications
+# 7. Verification of Installed Applications
 stress-ng --version
 
 fio --version
@@ -66,7 +66,7 @@ These commands confirm that each selected application is correctly installed and
 
 
 _________________________________________________________________________________
-# 7. Service Status Verification (Apache)
+# 8. Service Status Verification (Apache)
 systemctl status apache2
 
 
