@@ -9,7 +9,7 @@ sudo apt update
 
 Explanation:
 This command updates the local APT package index, ensuring that the latest package metadata is available prior to software installation.
-
+![Week 3 – APT package index update](img/week3/update.PNG)
 _________________________________________________________________________________
 
 # 2. CPU and Memory Stress Tool Installation
@@ -18,7 +18,7 @@ sudo apt install stress-ng -y
 
 Explanation:
 Installs stress-ng, a comprehensive workload generator used to create controlled CPU and memory stress scenarios for performance evaluation.
-
+![Week 3 – stress-ng installation](img/week3/stress.PNG)
 
 _________________________________________________________________________________
 # 3. Disk I/O Performance Tool Installation
@@ -27,7 +27,7 @@ sudo apt install fio -y
 
 Explanation:
 Installs fio, a flexible and widely adopted disk benchmarking tool used to simulate sequential and random read/write workloads.
-
+![Week 3 – fio disk benchmarking tool installation](img/week3/fio.PNG)
 
 _________________________________________________________________________________
 # 4. Network Performance Testing Tool Installation
@@ -36,6 +36,7 @@ sudo apt install iperf3 -y
 
 Explanation:
 Installs iperf3, a network performance measurement tool used to evaluate throughput and latency between systems.
+![Week 3 – iperf3 network testing tool installation](img/week3/iperf3.PNG)
 
 
 _________________________________________________________________________________
@@ -45,6 +46,7 @@ sudo apt install apache2 -y
 
 Explanation:
 Installs the Apache HTTP Server, representing a persistent server workload that generates continuous CPU, memory, and network activity.
+![Week 3 – Apache HTTP Server installation](img/week3/apache.PNG)
 
 
 _________________________________________________________________________________
@@ -60,6 +62,7 @@ apache2 -v
 
 Explanation:
 These commands confirm that each selected application is correctly installed and accessible, ensuring readiness for performance testing in subsequent phases.
+![Week 3 – Installed application version verification](img/week3/all_version_verfication.PNG)
 
 
 _________________________________________________________________________________
@@ -69,7 +72,7 @@ systemctl status apache2
 
 Explanation:
 Verifies that the Apache service is running and managed correctly by the system service manager.
-
+![Week 3 – Apache service status verification](img/week3/systemctl_status_apache2.PNG)
 
 _________________________________________________________________________________
 # 8.Reflection
