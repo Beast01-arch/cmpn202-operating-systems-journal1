@@ -69,7 +69,7 @@ Explanation:
 This command verifies that the SSH service is active. SSH is the primary remote administration mechanism and must be operational for subsequent coursework phases.
 
 ________________________________________
-#  Summary of = Commands
+#  Summary of Commands
 The commands executed during Week 2 focus on system observation rather than configuration. Collectively, they provide:
 •	Baseline performance metrics
 •	Visibility into running services
