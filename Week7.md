@@ -12,8 +12,9 @@ ________________________________________
 sudo apt install lynis -y
 Purpose:
 Installs Lynis, a comprehensive host-based security auditing tool used to assess system hardening, configuration weaknesses, and compliance with best practices.
-![Week 7 – Lynis installation on Ubuntu Server](img/week7/lynis_install.PNG)_______________________________________
-##2.2 Running the Lynis Security Audit
+![Week 7 – Lynis installation on Ubuntu Server](img/week7/lynis_install.PNG)
+_______________________________________
+## 2.2 Running the Lynis Security Audit
 sudo lynis audit system
 Purpose:
 Performs a full system security audit, evaluating authentication mechanisms, filesystem permissions, kernel parameters, services, and security controls.
