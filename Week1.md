@@ -57,7 +57,7 @@ These commands offer proof of the following:
 •	Disk Capacity and Usage
 •	Network interface configuration
 •	Operating system version
-
+![Week 1 – CPU architecture information](img/week1/lscpu.PNG)
  
 __________________________________________________________________________
 # 7.	 Comm and-Line Evidence (Ubuntu Server)
@@ -72,21 +72,26 @@ ________________________________________________________________________
 free -h
 Purpose:
 Displays the total, used, and available memory details, which helps set the baseline for available RAM.
+![Week 1 – Memory usage information (free -h)](img/week1/free-h.PNG)
 ________________________________________________________________________
 ## 7.3	Disk Usage Information
 df -h
 Purpose:
 Shows disk use and mounted file systems, allowing the user to evaluate storage space for applications and logs.
+![Week 1 – Disk usage information (df -h)](img/week1/df-h.PNG)
 ________________________________________________________________________
 ## 7.4	Network Interface Configuration
 ip addr
 Aim:
 Provides lists of network interfaces and assigned IP addresses, serving as the foundation for implementing SSH security restrictions.
+![Week 1 – IP address configuration](img/week1/ipaddr.PNG)
+
 ________________________________________________________________________
 ## 7.5	Operating System Distribution Information
 lsb_release -
 PURPOSE:
 Confirms the Ubuntu Server version and release information.
+![Week 1 – Operating system release details](img/week1/lsb_release-a.PNG)
 ________________________________________________________________________
 # 8. Reflection (Professional Insight)
 From Week 1, the system architecture is well defined and justified. It emphasizes security, realism, and command line skills. Through careful selection of distributions and strict remote administration, this environment is ready for secure configuration, monitoring, and performance analysis in the next weeks.
