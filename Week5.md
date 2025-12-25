@@ -33,7 +33,7 @@ ________________________________________________________________________________
 systemctl status unattended-upgrades
 Explanation:
 It verifiy that the automatic updates service is active and running in a proper and correctly ways.
-![Week 5 – Unattended upgrades service status](img/week5/status_unattended_upgrades.PNG)
+![Week 5 – Unattended upgrades service status](img/week5/suu.PNG)
 _________________________________________________________________________________
 # 4. Intrusion Prevention with Fail2Ban
 ## 4.1 Installing Fail2Ban
