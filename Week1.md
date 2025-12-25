@@ -66,7 +66,7 @@ These are the commands that were performed on the Ubuntu Server, and their scree
 uname -a
 Purpose:
 Prints kernel version and architecture information, as well as OS details, verifying the server environment.
-![week 1 – username (uname)](img/week1/uname)
+![Week 1 – Kernel and system information (uname -a)](img/week1/uname.PNG)
 ________________________________________________________________________
 ## 7.2	Memory Information
 free -h
