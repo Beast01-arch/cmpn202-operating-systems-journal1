@@ -8,32 +8,32 @@ ________________________________________________________________________________
 sudo aa-status
 Explanation:
 This command display the current status of AppArmor, including loaded and enforce profile. Apparmor restrict application capabilitie based on predefined policies, limiting the impact of compromised process.
-
+![Week 5 – AppArmor status verification (aa-status)](img/week5/aa_status.PNG)
 _________________________________________________________________________________
 ## 2.2 Ensuring Apparmor Is Enabled
 sudo systemctl status apparmor
 Explanation:
 It confirm that the Apparmor service is active and enforcing access control policie.
-
+![Week 5 – AppArmor service status](img/week5/apparmor.PNG)
 _________________________________________________________________________________
 # 3. Automatic Security Updates Configuration
 ## 3.1 Installing Unattended Upgrade
 sudo apt install unattended-upgrades -y
 Explanation:
 It install the unattended upgrade package, enabling automatic installation of critical security updates.
-
+![Week 5 – Unattended upgrades installation](img/week5/unattend_upgrades.PNG)
 _________________________________________________________________________________
 ## 3.2 Enabling Automatic Update
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 Explanation:
 It configure the system to automatically apply security update without manual intervention.
-
+![Week 5 – dpkg unattended-upgrades configuration](img/week5/dpkg_unattend_upgrades.PNG)
 _________________________________________________________________________________
 ## 3.3 Verifying Automatic Updates Service
 systemctl status unattended-upgrades
 Explanation:
 It verifiy that the automatic updates service is active and running in a proper and correctly ways.
-
+![Week 5 – Unattended upgrades service status](img/week5/status_unattended_upgrades.PNG)
 _________________________________________________________________________________
 # 4. Intrusion Prevention with Fail2Ban
 ## 4.1 Installing Fail2Ban
@@ -53,7 +53,7 @@ ________________________________________________________________________________
 sudo fail2ban-client status
 Explanation:
 It Display the operational status of Fail2Ban and the list of active jails.
-
+![Week 5 – Fail2Ban installation, enablement, and jail status](img/week5/failltoba_all.PNG)
 _________________________________________________________________________________
 # 5. Security Baseline Verification Script (security-baseline.sh)
 ## 5.1 Script Purpose
@@ -88,7 +88,7 @@ ________________________________________________________________________________
 ## 5.3 Making the Script Executable and Running It
 chmod +x security-baseline.sh
 ./security-baseline.sh
-📸 [SCREENSHOT PLACEHOLDER – security-baseline.sh execution output]
+![Week 5 – Security baseline verification script execution](img/week5/security_baseline.PNG)
 _________________________________________________________________________________
 # 6. Remote Monitoring Script (monitor-server.sh)
 6.1 Script Purpose
@@ -125,8 +125,9 @@ ________________________________________________________________________________
 ## 6.3 Executing the Monitoring Script
 chmod +x monitor-server.sh
 ./monitor-server.sh
-📸 [SCREENSHOT PLACEHOLDER – monitor-server.sh execution output]
+![Week 5 – SSH password prompt during remote monitoring](img/week5/ask_password_for_monitering.PNG)
 
+![Week 5 – Remote monitoring script execution output](img/week5/monitering_server.PNG)
 _________________________________________________________________________________
 # 7. Reflection
 IT significantly strengthened the system’s security posture by introducing mandatory access control(MAC), automated patch management, and intrusion prevention mechanisms. The development of custom verification and monitoring scripts  inhance and  enhances operational transparency and supports continuous compliance assessment.
