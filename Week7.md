@@ -53,14 +53,16 @@ Confirms continued secure SSH access using key-based authentication after all se
 
 ________________________________________
 # 4. Summary Table –  Execution Context
-Security Task	Ubuntu Server	Fedora Workstation
-Lynis installation	✅	❌
-Lynis audit execution	✅	❌
-Service inventory	✅	❌
-Listening ports verification	✅	❌
-SSH hardening verification	✅	❌
-Network port scanning (nmap)	❌	✅
-External SSH validation	❌	✅
+| Security Task                     | Ubuntu Server | Fedora Workstation |
+|----------------------------------|---------------|--------------------|
+| Lynis installation               | ✅            | ❌                 |
+| Lynis audit execution            | ✅            | ❌                 |
+| Service inventory                | ✅            | ❌                 |
+| Listening ports verification     | ✅            | ❌                 |
+| SSH hardening verification       | ✅            | ❌                 |
+| Network port scanning (nmap)     | ❌            | ✅                 |
+| External SSH validation          | ❌            | ✅                 |
+
 ________________________________________
 # 5.Professional Rationale
 It adopts a dual-perspective security audit model:
