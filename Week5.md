@@ -53,7 +53,7 @@ ________________________________________________________________________________
 sudo fail2ban-client status
 Explanation:
 It Display the operational status of Fail2Ban and the list of active jails.
-![Week 5 – Fail2Ban installation, enablement, and jail status](img/week5/failltoba_all.PNG)
+![Week 5 – Fail2Ban installation, enablement, and jail status](img/week5/fail.PNG)
 _________________________________________________________________________________
 # 5. Security Baseline Verification Script (security-baseline.sh)
 ## 5.1 Script Purpose
