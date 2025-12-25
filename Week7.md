@@ -51,6 +51,7 @@ ________________________________________
 ssh adminuser@192.168.56.101
 Purpose:
 Confirms continued secure SSH access using key-based authentication after all security controls have been applied.
+
 ![Week 7 – Proof of password-based SSH authentication blocked](img/week7/proof_of_password_inactive.PNG)
 
 
