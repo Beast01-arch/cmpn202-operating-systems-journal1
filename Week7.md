@@ -17,7 +17,7 @@ Installs Lynis, a comprehensive host-based security auditing tool used to assess
 sudo lynis audit system
 Purpose:
 Performs a full system security audit, evaluating authentication mechanisms, filesystem permissions, kernel parameters, services, and security controls.
-![Week 7 – Lynis full system security audit results](img/week7/audit_lynis.PNG)
+![Week 7 – Lynis full system security audit results](img/week7/audit.PNG)
 ________________________________________
 ## 2.3 Service Inventory and Justification
 systemctl --type=service --state=running
@@ -51,7 +51,12 @@ ssh adminuser@192.168.56.101
 Purpose:
 Confirms continued secure SSH access using key-based authentication after all security controls have been applied.
 ![Week 7 – Proof of password-based SSH authentication blocked](img/week7/proof_of_password_inactive.PNG)
+
+
+
 or 
+
+
 ![Week 7 – External SSH access validation using adminuser](img/week7/admin_ssh.PNG)
 ________________________________________
 # 4. Summary Table –  Execution Context
