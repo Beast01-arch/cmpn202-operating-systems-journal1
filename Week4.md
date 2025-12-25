@@ -8,12 +8,14 @@ ________________________________________________________________________________
 ssh username @server_ip
 Explanation:
 This command make a secure remote shell session from the Fedora Workstation to Ubuntu Server. SSH serves as the exclusive administrative access mechanism for the server and workstation.
+![Week 4 – SSH login from Fedora Workstation to Ubuntu Server](img/week4/sshusername@server_ip.PNG)
 
 _________________________________________________________________________________
 ## 2.2 SSH Configuration File(Before Modification)
 Sudo nano /etc/ssh/sshd_config
 Explanation:
 The SSH daemon configuration file is inspected to review and re-write default authentication and access settings prior to hardening.
+![Week 4 – SSH login from Fedora Workstation to Ubuntu Server](img/week4/sshusername@server_ip.PNG)
 
 _________________________________________________________________________________
 ## 2.3 SSH Hardening Configuration
@@ -26,6 +28,7 @@ Explanation:
 •	Prevent password-based authentication
 •	Enforce SSH key-based authentication
 These controls significantly manage to reduce  the risk of brute-force and credential-based attacks.
+![Week 4 – SSH daemon configuration before hardening](img/week4/sshd_config.PNG)
 
 _________________________________________________________________________________
 ## 2.4 SSH Service Restart
@@ -38,6 +41,7 @@ ________________________________________________________________________________
 sudo systemctl status ssh
 Explanation:
 Confirms that the SSH service is active and running correctly after configuration change.
+![Week 4 – SSH service status after hardening](img/week4/ssh.PNG)
 
 _________________________________________________________________________________
 # 3. User and Privilege Management
@@ -45,14 +49,14 @@ ________________________________________________________________________________
 sudo adduser adminuser
 Explanation:
 Creates a non-root user account for administrative task, enforcing the principle of least privilege.
-
+![Week 4 – Creation of non-root administrative user](img/week4/add_user.PNG)
 _________________________________________________________________________________
 
 ## 3.2 Granting Administrative Privilege
 sudo usermod -aG sudo adminuser
 Explanation:
 Adds the new client to the sudo group, allowing controlled privilege escalation when it require.
-
+![Week 4 – Assigning sudo privileges to admin user](img/week4/admin_user.PNG)
 _________________________________________________________________________________
 ## 3.3 Verification of User Privileges
 groups adminuser
@@ -66,25 +70,29 @@ sudo apt install ufw -y
 sudo ufw enable
 Explanation:
 Installs and enables the Uncomplicated Firewall (UFW) to control incoming and outgoing traffics.
+![Week 4 – UFW installation](img/week4/ufw_install.PNG)
 
+![Week 4 – Firewall enabled on system startup](img/week4/firewall_enable.PNG)
 _________________________________________________________________________________
 ## 4.2 Restricting SSH Access to Workstation IP
 sudo ufw allow from workstation_ip to port 22
 Explanation:
 Allows SSH access exclusively from the Fedora Workstation’s IP address, preventing unauthorised remote connection.
-
+![Week 4 – SSH access restricted to workstation IP](img/week4/rule_added.PNG)
 _________________________________________________________________________________
 ## 4.3 Default Deny Policy Enforcement
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 Explanation:
 Implements a default-deny security posture for incomming traffic, reducing the server attack surface.
+![Week 4 – Default firewall deny/allow policy](img/week4/ufwincome-out.PNG)
 
 _________________________________________________________________________________
 ## 4.4 Firewall Ruleset Verification
 sudo ufw status verbose
 Explanation:
 Displays the complete firewall rule set, confirming correct enforcement of network access restriction.
+![Week 4 – Firewall ruleset verification (verbose)](img/week4/verbose.PNG)
 
 _________________________________________________________________________________
 # 5. Remote Administration Evidence
@@ -92,7 +100,7 @@ whoami
 host_name
 Explanation:
 These commands confirm the authenticated client context and target system identity during remote administration.
-📸 [SCREENSHOT PLACEHOLDER – Remote administration confirmation output]
+![Week 4 – Remote administration identity confirmation](img/week4/remote_admin.PNG)
 _________________________________________________________________________________
 # 6. Reflection
 Week 4 established the foundational security posture of the  main Ubuntu Server system by  improved and enforcing secure remote access, restricting administrative privilege, and implementing host-based firewall control. These measures significantly reduce the system’s attack surface while maintaining operational accessibility.
