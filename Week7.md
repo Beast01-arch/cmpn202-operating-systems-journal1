@@ -12,30 +12,30 @@ ________________________________________
 sudo apt install lynis -y
 Purpose:
 Installs Lynis, a comprehensive host-based security auditing tool used to assess system hardening, configuration weaknesses, and compliance with best practices.
-________________________________________
+![Week 7 – Lynis installation on Ubuntu Server](img/week7/lynis_install.PNG)_______________________________________
 ##2.2 Running the Lynis Security Audit
 sudo lynis audit system
 Purpose:
 Performs a full system security audit, evaluating authentication mechanisms, filesystem permissions, kernel parameters, services, and security controls.
-
+![Week 7 – Lynis full system security audit results](img/week7/audit_lynis.PNG)
 ________________________________________
 ## 2.3 Service Inventory and Justification
 systemctl --type=service --state=running
 Purpose:
 Lists all currently running services on the server, enabling justification of each active service and identification of unnecessary attack surface.
-
+![Week 7 – Running service inventory on Ubuntu Server](img/week7/services_inv_and_justification.PNG)
 ________________________________________
 ## 2.4 Network Exposure Verification (Local)
 ss -tuln
 Purpose:
 Displays listening TCP and UDP sockets, confirming that only essential services are exposed on the network.
-
+![Week 7 – Listening TCP and UDP ports on Ubuntu Server](img/week7/ss-tuln.PNG)
 ________________________________________
 ## 2.5 SSH Security Verification
 sudo sshd -T | grep -E "permitrootlogin|passwordauthentication|pubkeyauthentication"
 Purpose:
 Confirms that SSH hardening directives are actively enforced by the SSH daemon.
-
+![Week 7 – SSH daemon hardening verification](img/week7/ssh_security_verification.PNG)
 ________________________________________
 # 3. Commands Executed on the Fedora Workstation
 The following commands were executed on the Fedora Workstation, acting as an external security assessment client.
@@ -44,13 +44,15 @@ ________________________________________
 nmap -sS 192.168.56.101
 Purpose:
 Performs a TCP SYN scan from an external system to identify exposed ports and validate firewall effectiveness. This scan is conducted exclusively within the isolated VirtualBox network.
-
+![Week 7 – External Nmap TCP SYN scan from Fedora Workstation](img/week7/nmap.PNG)
 ________________________________________
 ## 3.2 SSH Access Validation
 ssh adminuser@192.168.56.101
 Purpose:
 Confirms continued secure SSH access using key-based authentication after all security controls have been applied.
-
+![Week 7 – Proof of password-based SSH authentication blocked](img/week7/proof_of_password_inactive.PNG)
+or 
+![Week 7 – External SSH access validation using adminuser](img/week7/admin_ssh.PNG)
 ________________________________________
 # 4. Summary Table –  Execution Context
 | Security Task                     | Ubuntu Server | Fedora Workstation |
